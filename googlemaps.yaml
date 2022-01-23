@@ -1,5 +1,5 @@
 name: googlemaps
-version: 1.0.0
+version: 1.1.0
 description: Create and insert google maps into a page with a shortcode.
 author: Nico Hemkes
 homepage: https://hemk.es/
@@ -8,10 +8,10 @@ paypal: https://paypal.me/nhemkes
 amount: 5
 
 settings:
-  1address: Berlin, Germany
   1width: 100%
   1height: 600px
   1type: r
+  1zoom: 15
 
 forms:
   fields:
@@ -22,13 +22,10 @@ forms:
         shortcode:
           type: paragraph
           label: Editor Shortcode
-          value: GMAPS_FRAME1
-        1address:
-          type: text
-          label: Address
+          value: GOOGLEMAPS
         1zoom:
           type: select
-          label: Zoom level
+          label: Default zoom
           options:
             4: Continent
             8: Country

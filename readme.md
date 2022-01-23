@@ -13,7 +13,8 @@ The plugin is developed for [Typemill](https://github.com/typemill/typemill), a 
 ### Insert google maps into a page
 
 * Create paragraph
-* Insert the shortcode `[:GMAPS_FRAME1:]`
+* Insert shortcode `[:GOOGLEMAPS address="Borkum, Germany" :]`
+  * with zoom `[:GOOGLEMAPS address="Borkum, Germany" zoom=15 :]`
 
 ### Screenshots
 

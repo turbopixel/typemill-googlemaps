@@ -46,12 +46,17 @@ class googlemaps extends Plugin {
     $shortcodeArray = $shortcode->getData();
 
     // check if it is the shortcode name that we where looking for
-    if (is_array($shortcodeArray) && $shortcodeArray['name'] == 'GMAPS_FRAME1') {
+    if (is_array($shortcodeArray) && $shortcodeArray['name'] == 'GOOGLEMAPS') {
       // we found our shortcode, so stop firing the event to other plugins
       $shortcode->stopPropagation();
+      $settings = $this->pluginData;
+
+      # Of course you should validate the user input here, but let us skip it to keep it easy ...
+      $address = $shortcodeArray['params']['address'] ?? 'Berlin, Germany';
+      $zoom    = (int)($shortcodeArray['params']['zoom'] ?? $settings["1zoom"]);
 
       // and return a html-snippet that replaces the shortcode on the page.
-      $shortcode->setData($this->generateFrame());
+      $shortcode->setData($this->generateFrame($settings, $address, $zoom));
     }
   }
 
@@ -60,18 +65,10 @@ class googlemaps extends Plugin {
    *
    * @return string
    */
-  protected function generateFrame() {
-    $settings = $this->pluginData;
-
-    $address = $settings["1address"] ?? "";
-    $width   = $settings["1width"] ?? "";
-    $height  = $settings["1height"] ?? "";
-    $type    = $settings["1type"] ?? "";
-    $zoom    = $settings["1zoom"] ?? "";
-
-    if (empty($address)) {
-      return "ERROR: missing address";
-    }
+  protected function generateFrame(array $settings, string $address, int $zoom) {
+    $width  = $settings["1width"] ?? "";
+    $height = $settings["1height"] ?? "";
+    $type   = $settings["1type"] ?? "";
 
     $html = '<iframe width="%s" height="%s" src="https://maps.google.com/maps?width=%s&amp;height=%s&amp;hl=en&amp;q=%s&amp;ie=UTF8&amp;t=%s&amp;z=%d&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>';
 
