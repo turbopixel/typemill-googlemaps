@@ -22,7 +22,7 @@ forms:
         shortcode:
           type: paragraph
           label: Editor Shortcode
-          value: GOOGLEMAPS
+          value: [:GOOGLEMAPS address='Borkum, Germany' :]
         1zoom:
           type: select
           label: Default zoom
