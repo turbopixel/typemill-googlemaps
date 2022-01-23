@@ -3,12 +3,17 @@
 This plugin is made for [Typemill](https://github.com/typemill/typemill), a flat-file cms.
 
 ## How to install
-* 
+
 * Download this plugin (zip).
 * Unzip the plugin.
 * Upload the plugin folder into to the typemill plugin-folder (`typemill/plugins/`)
 * Login to your Typemill installation.
 * Go to settings -> plugins and activate your plugin.
+
+## Shortcode
+
+* Create paragraph
+* Insert the shortcode `GMAPS_FRAME1`
 
 ## Screenshots
 
