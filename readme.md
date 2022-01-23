@@ -1,6 +1,6 @@
 # Google Maps Plugin
 
-The plugin is developed for [Typemill](https://github.com/typemill/typemill), a flat-file cms.
+This plugin is developed for [Typemill](https://github.com/typemill/typemill), a flat-file cms.
 
 ### How to install
 
