@@ -44,8 +44,8 @@ forms:
         1width:
           type: text
           label: iFrame width
-          description: In pixel or procent
+          description: In pixel or percent
         1height:
           type: text
           label: iFrame height
-          description: In pixel or procent
+          description: In pixel or percent
