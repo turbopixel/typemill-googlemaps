@@ -2,9 +2,11 @@
 
 This plugin is developed for [Typemill](https://github.com/typemill/typemill), a flat-file cms.
 
-## Moved to Codeberg
+## Moved to Codeberg!
 
-This repository was moved to Codeberg: [codeberg.org/turbopixel/typemill-plugin-googlemaps](https://codeberg.org/turbopixel/typemill-plugin-googlemaps)
+This repository was moved to Codeberg.org: [codeberg.org/turbopixel/typemill-plugin-googlemaps](https://codeberg.org/turbopixel/typemill-plugin-googlemaps)
+
+---- 
 
 ### How to install
 
